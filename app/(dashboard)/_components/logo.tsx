@@ -3,10 +3,11 @@ import Image from "next/image";
 export const Logo = () => {
   return (
     <Image
-      height={130}
-      width={130}
+     className="rounded"
+      height={50}
+      width={50}
       alt="logo"
-      src="/logo.svg"
+      src="/logo.png"
     />
   )
 }
