@@ -28,7 +28,7 @@ interface TitleFormProps {
 
 const formSchema = z.object({
   title: z.string().min(1, {
-    message: "Title is required",
+    message: "Un titre est requis",
   }),
 });
 
@@ -52,11 +52,11 @@ export const TitleForm = ({
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       await axios.patch(`/api/courses/${courseId}`, values);
-      toast.success("Formation mis à jour");
+      toast.success("Formation mise à jour");
       toggleEdit();
       router.refresh();
     } catch {
-      toast.error("Something went wrong");
+      toast.error("Une erreur s'est produite");
     }
   }
 

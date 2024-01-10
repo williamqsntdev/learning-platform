@@ -22,7 +22,7 @@ import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
   title: z.string().min(1, {
-    message: "Title is required",
+    message: "Le titre est requis",
   }),
 });
 
@@ -51,10 +51,10 @@ const CreatePage = () => {
     <div className="max-w-5xl mx-auto flex md:items-center md:justify-center h-full p-6">
       <div>
         <h1 className="text-2xl">
-          Name your course
+          Nom de la formation
         </h1>
         <p className="text-sm text-slate-600">
-          What would you like to name your course? Don&apos;t worry, you can change this later.
+        Quel nom souhaiteriez-vous donner à votre cours ? Ne vous inquiétez pas, vous pourrez modifier cela plus tard.
         </p>
         <Form {...form}>
           <form
@@ -67,17 +67,17 @@ const CreatePage = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>
-                    Course title
+                    Titre de la formation
                   </FormLabel>
                   <FormControl>
                     <Input
                       disabled={isSubmitting}
-                      placeholder="e.g. 'Advanced web development'"
+                      placeholder="e.g. 'Cours avancé d'e-commerce'"
                       {...field}
                     />
                   </FormControl>
                   <FormDescription>
-                    What will you teach in this course?
+                    Qu'allez-vous enseigner dans ce cours ?
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -89,14 +89,14 @@ const CreatePage = () => {
                   type="button"
                   variant="ghost"
                 >
-                  Cancel
+                  Annuler
                 </Button>
               </Link>
               <Button
                 type="submit"
                 disabled={!isValid || isSubmitting}
               >
-                Continue
+                Continuer
               </Button>
             </div>
           </form>

@@ -119,7 +119,7 @@ export const ChaptersForm = ({
                   <FormControl>
                     <Input
                       disabled={isSubmitting}
-                      placeholder="e.g. 'Introduction dans le cours...'"
+                      placeholder="e.g. 'Introduction dans le ...'"
                       {...field}
                     />
                   </FormControl>

@@ -28,7 +28,7 @@ interface DescriptionFormProps {
 
 const formSchema = z.object({
   description: z.string().min(1, {
-    message: "Description is required",
+    message: "Une description est requise",
   }),
 });
 

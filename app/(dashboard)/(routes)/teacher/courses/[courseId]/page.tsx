@@ -75,17 +75,17 @@ const CourseIdPage = async ({
     <>
       {!course.isPublished && (
         <Banner
-          label="This course is unpublished. It will not be visible to the students."
+          label="Ce cours est inédit. Il ne sera pas visible par les étudiants."
         />
       )}
       <div className="p-6">
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-y-2">
             <h1 className="text-2xl font-medium">
-              Course setup
+              Configuration de la formation
             </h1>
             <span className="text-sm text-slate-700">
-              Complete all fields {completionText}
+              Compléter tous les champs {completionText}
             </span>
           </div>
           <Actions
@@ -99,7 +99,7 @@ const CourseIdPage = async ({
             <div className="flex items-center gap-x-2">
               <IconBadge icon={LayoutDashboard} />
               <h2 className="text-xl">
-                 Customise ta formation
+                 Personnalisez la formation
               </h2>
             </div>
             <TitleForm

@@ -39,7 +39,7 @@ export const AttachmentForm = ({
       toggleEdit();
       router.refresh();
     } catch {
-      toast.error("Quelque chose s'est mal passé");
+      toast.error("Une erreur s'est produite");
     }
   };
 
@@ -47,10 +47,10 @@ export const AttachmentForm = ({
     try {
       setDeletingId(id);
       await axios.delete(`/api/courses/${courseId}/attachments/${id}`);
-      toast.success("Attachment deleted");
+      toast.success("Pièce jointe supprimée");
       router.refresh();
     } catch {
-      toast.error("Something went wrong");
+      toast.error("Une erreur s'est produite");
     } finally {
       setDeletingId(null);
     }
@@ -76,7 +76,7 @@ export const AttachmentForm = ({
         <>
           {initialData.attachments.length === 0 && (
             <p className="text-sm mt-2 text-slate-500 italic">
-              Aucune pièces jointes
+              Aucune pièces jointe
             </p>
           )}
           {initialData.attachments.length > 0 && (

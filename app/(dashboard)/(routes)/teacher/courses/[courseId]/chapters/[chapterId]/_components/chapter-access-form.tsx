@@ -57,25 +57,25 @@ export const ChapterAccessForm = ({
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       await axios.patch(`/api/courses/${courseId}/chapters/${chapterId}`, values);
-      toast.success("Chapter updated");
+      toast.success("Le chapitre a été mis à jour");
       toggleEdit();
       router.refresh();
     } catch {
-      toast.error("Something went wrong");
+      toast.error("Une erreur s'est produite");
     }
   }
 
   return (
     <div className="mt-6 border bg-slate-100 rounded-md p-4">
       <div className="font-medium flex items-center justify-between">
-        Chapter access
+        Accès aux chapitres
         <Button onClick={toggleEdit} variant="ghost">
           {isEditing ? (
-            <>Cancel</>
+            <>Annuler</>
           ) : (
             <>
               <Pencil className="h-4 w-4 mr-2" />
-              Edit access
+              Modifier l&apos;accès
             </>
           )}
         </Button>
@@ -86,9 +86,9 @@ export const ChapterAccessForm = ({
           !initialData.isFree && "text-slate-500 italic"
         )}>
           {initialData.isFree ? (
-            <>This chapter is free for preview.</>
+            <>L'aperçu de ce chapitre est gratuit.</>
           ) : (
-            <>This chapter is not free.</>
+            <>Ce chapitre n'est pas gratuit.</>
           )}
         </p>
       )}
@@ -111,8 +111,7 @@ export const ChapterAccessForm = ({
                   </FormControl>
                   <div className="space-y-1 leading-none">
                     <FormDescription>
-                      Check this box if you want to make this chapter free for preview
-                    </FormDescription>
+                      Cochez cette case si vous souhaitez que ce chapitre soit gratuit pour un aperçu                    </FormDescription>
                   </div>
                 </FormItem>
               )}
@@ -122,7 +121,7 @@ export const ChapterAccessForm = ({
                 disabled={!isValid || isSubmitting}
                 type="submit"
               >
-                Save
+                Sauvegarder
               </Button>
             </div>
           </form>
