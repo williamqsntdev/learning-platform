@@ -34,7 +34,7 @@ export const CoursesList = ({
       </div>
       {items.length === 0 && (
         <div className="text-center text-sm text-muted-foreground mt-10">
-          Aucune formation trouvée pour le moment ? Nous avons ce qu'il vous faut. <Link href="/search" className="text-sky-500">Trouver ma formation </Link>
+          Aucune formation trouvée pour le moment ? Nous avons ce qu&apos;il vous faut. <Link href="/search" className="text-sky-500">Trouver ma formation </Link>
         </div>
       )}
     </div>
