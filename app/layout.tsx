@@ -4,12 +4,13 @@ import { Inter } from 'next/font/google'
 import { ClerkProvider } from '@clerk/nextjs'
 import { ToastProvider } from '@/components/providers/toaster-provider'
 import { ConfettiProvider } from '@/components/providers/confetti-provider'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'William Quesnot',
-  description: 'Besoin de développer ton business, bénéficie des conseils et formations proposées.',
+  title: 'William Qent',
+  description: 'Besoin de développer tes connaissances, bénéficie des conseils et formations proposées.',
 }
 
 export default function RootLayout({
@@ -19,6 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
+      
       <html lang="en">
         <body className={inter.className}>
           <ConfettiProvider />

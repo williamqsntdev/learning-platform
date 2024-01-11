@@ -1,6 +1,7 @@
 import { Category, Course } from "@prisma/client";
 
 import { CourseCard } from "@/components/course-card";
+import Link from "next/link";
 
 type CourseWithProgressWithCategory = Course & {
   category: Category | null;
@@ -33,7 +34,7 @@ export const CoursesList = ({
       </div>
       {items.length === 0 && (
         <div className="text-center text-sm text-muted-foreground mt-10">
-          No courses found
+          Aucune formation trouvée pour le moment ? Nous avons ce qu'il vous faut. <Link href="/search" className="text-sky-500">Trouver ma formation </Link>
         </div>
       )}
     </div>

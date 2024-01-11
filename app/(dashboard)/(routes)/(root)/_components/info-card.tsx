@@ -22,7 +22,7 @@ export const InfoCard = ({
         icon={Icon}
       />
       <div>
-        <p className="font-medium">
+        <p className="font-bold">
           {label}
         </p>
         <p className="text-gray-500 text-sm">

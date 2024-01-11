@@ -21,6 +21,7 @@ export default async function Dashboard() {
 
   return (
     <div className="p-6 space-y-4">
+      <p className="text-2xl font-bold text-sky-700 mb-4">Bienvenue sur votre Tableau de Bord ! Explorez, apprenez et grandissez.</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
        <InfoCard
           icon={Clock}
